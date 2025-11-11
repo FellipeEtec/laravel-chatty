@@ -1,59 +1,107 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Chatty - Implementação Chatify em Laravel
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Este projeto foi desenvolvido com a meta de implementar o Chatify, boilerplate de chat em tempo real feito por manuafio, em Laravel 12.x
 
-## About Laravel
+## Sumário
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Conteúdos abordados nesse README
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+1. [Criando o Projeto](#1-criando-o-projeto)
+2. [Instalando Breeze](#2-instalando-breeze)
+3. [Instalando Chatify](#3-instalando-chatify)
+4. [Finalizando as Instalações](#4-finalizando-as-instalações)
+5. [Código Comentado](#5-código-comentado)
+6. [Projeto Rodando](#6-projeto-rodando)
+7. [Banco de Dados](#7-banco-de-dados)
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+---
 
-## Learning Laravel
+<br />
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+## 1. Criando o Projeto
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+`laravel new laravel-chatty`
 
-## Laravel Sponsors
+<img width="662" height="563" alt="1" src="https://github.com/user-attachments/assets/be30175a-a141-4a76-96e3-916fc5837182" />
+<blockquote> Comando inicial para a criação do projeto </blockquote>
+<br />
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+`migrations`
 
-### Premium Partners
+<img width="1012" height="544" alt="2" src="https://github.com/user-attachments/assets/ac28908f-d419-4ae9-94a1-8ae7f5cb4db8" />
+<blockquote> Seleção e Criação do Banco de Dados (MySQL) </blockquote>
+<br />
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+`npm install and npm run build`
 
-## Contributing
+<img width="664" height="349" alt="3" src="https://github.com/user-attachments/assets/ee94cca2-a642-4baf-8381-3c1e7ecd08c6" />
+<blockquote> Instalação e compilação de dependências do Node.js </blockquote>
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## 2. Instalando Breeze
 
-## Code of Conduct
+`cd laravel-chatty` e `composer require laravel/breeze --dev`
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+<img width="1202" height="639" alt="1" src="https://github.com/user-attachments/assets/906fbb12-68aa-4bf6-95bf-0109b685b749" />
+<blockquote> Requisição da dependência de desenvolvedor do `laravel/breeze` para o projeto via `composer` </blockquote>
+<br />
 
-## Security Vulnerabilities
+`php artisan breeze:install`
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+<img width="1214" height="685" alt="2" src="https://github.com/user-attachments/assets/6b805af3-b3e1-4475-b954-53da7287fb0f" />
+<blockquote> Instalação do Breeze via `artisan` (php) </blockquote>
 
-## License
+## 3. Instalando Chatify
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+`composer require munafio/chatify`
+
+<img width="1199" height="724" alt="1" src="https://github.com/user-attachments/assets/9bd9907b-17aa-4fa3-b9b5-c3aa7ea26a29" />
+<blockquote> Requisição da dependência do `munafio/chatify` para o projeto via `composer` </blockquote>
+<br />
+
+`php artisan chatify:install`
+
+<img width="1689" height="897" alt="2" src="https://github.com/user-attachments/assets/0a710603-fdc7-4eba-bce1-c03d7183d42a" />
+<blockquote> Instalação do Chatify via `artisan` (php) </blockquote>
+
+
+## 4. Finalizando as Instalações
+
+`php artisan migrate`
+
+<img width="1192" height="219" alt="1" src="https://github.com/user-attachments/assets/447183af-5a03-4d68-9873-ababc03f4d53" />
+<blockquote> Realizando as migrações necessárias para o funcionamento das dependências instaladas (Breeze e Chatify) </blockquote>
+
+## 5. Código Comentado
+
+`.env` e `.env.example`
+
+<img width="462" height="163" alt="env" src="https://github.com/user-attachments/assets/335483e2-f574-4670-a098-6526da740abf" />
+<blockquote> Variáveis de Ambiente do Pusher </blockquote>
+<br />
+
+`routes/chatify/web.php`
+
+<img width="967" height="773" alt="web" src="https://github.com/user-attachments/assets/a3105810-cec0-41e2-b57e-2ace3aeb29a0" />
+<blockquote> Rotas do Chatify </blockquote>
+<br />
+
+`resources/views/layouts/navigation.blade.php`
+
+<img width="616" height="93" alt="dashboard" src="https://github.com/user-attachments/assets/b6f9fdb7-54ae-4407-bf72-f0248f4dcc12" />
+<blockquote> Link de Navegação para o Chatify </blockquote>
+
+## 6. Projeto Rodando
+
+<img width="1917" height="997" alt="1" src="https://github.com/user-attachments/assets/8dcf4c6a-4770-4b86-bf57-1c099299a5b8" />
+<blockquote> Conversa entre dois usuários: <b>Usuário01</b> e <b>Usuário02</b> </blockquote>
+
+## 7. Banco de Dados
+
+`Estrutura do Banco de Dados`
+
+<img width="1051" height="362" alt="estrutura" src="https://github.com/user-attachments/assets/9ab6c37c-22f1-465e-99d0-4bc093b32cc1" />
+<br />
+
+`Registros da tabela de mensagens`
+
+<img width="1132" height="393" alt="mensagens" src="https://github.com/user-attachments/assets/f015d8cb-2228-4b98-9c5e-cf5d0f361ecc" />
