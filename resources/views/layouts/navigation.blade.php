@@ -15,6 +15,11 @@
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
+                    
+                    <!-- Link de Navegação para o Chat -->
+                    <x-nav-link :href="route('chatify')" :active="request()->routeIs('chatify')">
+                        {{ __('Chat') }}     
+                    </x-nav-link> 
                 </div>
             </div>
 

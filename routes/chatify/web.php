@@ -8,6 +8,8 @@
  * -----------------------------------------------------------------
  */
 
+// Rotas Automáticas do Chatify - Não Modificar
+
 use Illuminate\Support\Facades\Route;
 
 /*
